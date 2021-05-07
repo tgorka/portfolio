@@ -45,6 +45,14 @@ jobs:
             --standalone
             --output=output/resume.docx
             README.md
+            
+      # Create LaTeX file
+      - uses: docker://pandoc/core:2.13
+        with:
+          args: >-  # allows you to break string into multiple lines
+            --standalone
+            --output=output/resume.tex
+            README.md
           
       # Create pdf file
       - uses: docker://pandoc/latex:2.13
