@@ -32,9 +32,8 @@ jobs:
       # Create html file
       - uses: docker://pandoc/core:2.13
         with:
-          args: >-  # allows you to break string into multiple lines
+          args: >-  # allows you to break string into multiple lines --template=tmpl for templating
             --standalone
-            #--template=html5
             --output=output/index.html
             README.md
             
