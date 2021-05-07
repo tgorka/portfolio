@@ -61,7 +61,6 @@ jobs:
         with:
           args: >-  # allows you to break string into multiple lines
             --output=output/resume.pdf
-            --pdf-engine=xelatex
             --template=template.tex
             README.md
             
