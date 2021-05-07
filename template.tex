@@ -232,13 +232,7 @@ $endif$
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allow verbatim text in footnotes
 $endif$
-$if(geometry)$
-$if(beamer)$
 \geometry[margin=0.5in]{$for(geometry)$$geometry$$sep$,$endfor$}
-$else$
-\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
-$endif$
-$endif$
 $if(beamer)$
 \newif\ifbibliography
 $endif$
