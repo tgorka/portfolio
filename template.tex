@@ -20,10 +20,7 @@ $endif$
 %
 \documentclass[
   11pt,
-$if(lang)$
-  $babel-lang$,
-$endif$
-  a4paper,
+  english,
 $if(beamer)$
   ignorenonframetext,
 $if(handout)$
@@ -232,7 +229,7 @@ $endif$
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allow verbatim text in footnotes
 $endif$
-\geometry[margin=0.5in]{$for(geometry)$$geometry$$sep$,$endfor$}
+\usepackage[a4paper,margin=0.5in]{geometry}
 $if(beamer)$
 \newif\ifbibliography
 $endif$
