@@ -29,15 +29,13 @@ jobs:
       - name: Create output directory
         run: mkdir output
       
-      # Runs a set of commands using the runners shell
-      - name: Create html
-        run: echo "foo" > input.txt  # create an example file
+      # Create html file
       - uses: docker://pandoc/core:2.9
         with:
           args: >-  # allows you to break string into multiple lines
             --standalone
             --output=output/index.html
-            input.txt
+            README.md
       - uses: actions/upload-artifact@master
         with:
           name: resume
