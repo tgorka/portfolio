@@ -36,6 +36,7 @@ jobs:
             --standalone
             --template=template.tex
             --output=output/index.html
+            --verbose
             README.md
             
       # Create DocX file
@@ -45,6 +46,7 @@ jobs:
             --standalone
             --template=template.tex
             --output=output/resume.docx
+            --verbose
             README.md
             
       # Create LaTeX file
@@ -54,6 +56,7 @@ jobs:
             --standalone
             --template=template.tex
             --output=output/resume.tex
+            --verbose
             README.md
           
       # Create PDF file
@@ -63,6 +66,7 @@ jobs:
             --output=output/resume.pdf
             --template=template.tex
             --pdf-engine=xelatex
+            --verbose
             README.md
             
       - uses: actions/upload-artifact@master
