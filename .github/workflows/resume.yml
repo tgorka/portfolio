@@ -57,10 +57,11 @@ jobs:
             README.md
           
       # Create PDF file
-      - uses: docker://pandoc/latex:2.13
+      - uses: docker://pandoc/core:2.13
         with:
           args: >-  # allows you to break string into multiple lines
             --output=output/resume.pdf
+            --pdf-engine=xelatex
             --template=template.tex
             README.md
             
