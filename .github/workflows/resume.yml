@@ -29,19 +29,21 @@ jobs:
       - name: Create output directory
         run: mkdir output
       
-      # Create html file
+      # Create HTML file
       - uses: docker://pandoc/core:2.13
         with:
           args: >-  # allows you to break string into multiple lines --template=tmpl for templating
             --standalone
+            --template=template.tex
             --output=output/index.html
             README.md
             
-      # Create docx file
+      # Create DocX file
       - uses: docker://pandoc/core:2.13
         with:
           args: >-  # allows you to break string into multiple lines
             --standalone
+            --template=template.tex
             --output=output/resume.docx
             README.md
             
@@ -50,14 +52,16 @@ jobs:
         with:
           args: >-  # allows you to break string into multiple lines
             --standalone
+            --template=template.tex
             --output=output/resume.tex
             README.md
           
-      # Create pdf file
+      # Create PDF file
       - uses: docker://pandoc/latex:2.13
         with:
           args: >-  # allows you to break string into multiple lines
             --output=output/resume.pdf
+            --template=template.tex
             README.md
             
       - uses: actions/upload-artifact@master
