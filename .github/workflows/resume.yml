@@ -30,12 +30,20 @@ jobs:
         run: mkdir output
       
       # Create html file
-      - uses: docker://pandoc/core:2.9
+      - uses: docker://pandoc/core:2.13
         with:
           args: >-  # allows you to break string into multiple lines
             --standalone
             --output=output/index.html
             README.md
+          
+      # Create pdf file
+      - uses: docker://pandoc/latex:2.13
+        with:
+          args: >-  # allows you to break string into multiple lines
+            --output=output/resume.pdf
+            README.md
+            
       - uses: actions/upload-artifact@master
         with:
           name: resume
