@@ -4,10 +4,6 @@ Chief Technological Officer (CTO) / Director of Engineering
 
 San Francisco Bay Area, CA
 
-Phone: (+1) 510 717 7077
-
-Email: tomasz@gorka.org.pl
-
 
 LinkedIn : https://linkedin.com/in/tomaszgorka
 
