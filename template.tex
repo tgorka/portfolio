@@ -2,16 +2,6 @@
 % Pandoc LaTeX template
 %%
 
-%\documentclass[a4paper,11pt]{article}
-
-%\usepackage{hyperref}
-
-%\begin{document}
-
-%$body$
-
-%\end{document}
-
 
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
@@ -29,15 +19,11 @@ $if(CJKmainfont)$
 $endif$
 %
 \documentclass[
-$if(fontsize)$
-  $fontsize$,
-$endif$
+  11pt,
 $if(lang)$
   $babel-lang$,
 $endif$
-$if(papersize)$
-  $papersize$paper,
-$endif$
+  a4paper,
 $if(beamer)$
   ignorenonframetext,
 $if(handout)$
@@ -50,7 +36,7 @@ $endif$
 $for(classoption)$
   $classoption$$sep$,
 $endfor$
-]{$documentclass$}
+]{article}
 $if(beamer)$
 $if(background-image)$
 \usebackgroundtemplate{%
