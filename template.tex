@@ -2,12 +2,8 @@
 % Pandoc LaTeX template
 %%
 
-\documentclass[11pt,article,oneside]{memoir}
+\documentclass[11pt,article,oneside]{}
 
-
-$for(header-includes)$
-$header-includes$
-$endfor$
 
 \begin{document}
 %\setkeys{Gin}{width=1\textwidth}
@@ -20,9 +16,4 @@ $endfor$
 
 $body$
 
-
-
-$for(include-after)$
-$include-after$
-$endfor$
 \end{document}
